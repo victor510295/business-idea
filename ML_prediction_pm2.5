@@ -1,0 +1,24 @@
+"""
+
+# -*- coding: utf-8 -*-
+import csv
+import pandas as pd 
+import numpy as np 
+
+data = pd.read_csv('/Users/swenson/Downloads/train.csv',encoding='big5')
+print(data)
+
+
+
+t= data[data['測項']==data['測項'][2]]
+t
+y= data[data['測項']==data['測項'][2]].iloc[0]
+y
+
+hi = pd.DataFrame()
+for r in range(2,17):
+    y= data[data['測項']==data['測項'][2]].iloc[r]
+    hi=pd.concat([hi,y],axis=1)
+
+data.loc[2]
+
